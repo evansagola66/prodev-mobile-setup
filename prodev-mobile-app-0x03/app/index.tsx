@@ -1,29 +1,107 @@
 import { Text, TextInput, View, TouchableOpacity, Image, StyleSheet } from "react-native";
-import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
-import { FontAwesome, Ionicons } from "@expo/vector-icons";
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20, backgroundColor: "#fff" },
-  navGroup: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginBottom: 20 },
-  largeText: { fontSize: 32, fontWeight: "700", color: "#000" },
-  smallText: { fontSize: 14, color: "#666", marginBottom: 20 },
-  formGroup: { width: "100%", marginTop: 10 },
-  placeholderText: { fontSize: 12, color: "#666", marginBottom: 6 },
-  inputField: { borderWidth: 1, borderColor: "#e0e0e0", padding: 10, borderRadius: 8 },
-  passwordGroup: { flexDirection: "row", alignItems: "center", borderWidth: 1, borderColor: "#e0e0e0", padding: 10, borderRadius: 8 },
-  forgotPasswordText: { alignSelf: "flex-end", color: "#1e90ff", marginTop: 10 },
-  button: { backgroundColor: "#000", padding: 15, borderRadius: 8, alignItems: "center", marginTop: 20 },
-  buttonText: { color: "#fff", fontWeight: "700" },
-  dividerGroup: { flexDirection: "row", alignItems: "center", marginVertical: 20 },
-  divider: { flex: 1, height: 1, backgroundColor: "#e0e0e0" },
-  dividerText: { marginHorizontal: 10, color: "#666" },
-  socialMediaButtonGroup: { width: "100%" },
-  socialMediaButton: { borderWidth: 1, borderColor: "#e0e0e0", padding: 12, borderRadius: 8, marginBottom: 10 },
-  socialMediaButtonText: { marginLeft: 8 },
-  subTextGroup: { flexDirection: "row", justifyContent: "center", marginTop: 10 },
-  subText: { color: "#666" },
-  subTextJoin: { color: "#1e90ff" },
+  container: {
+    flex: 1,
+    padding: 24,
+    backgroundColor: "#ffffff",
+  },
+  navGroup: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+  },
+  largeText: {
+    fontSize: 28,
+    fontWeight: "700",
+    color: "#000000",
+  },
+  smallText: {
+    fontSize: 14,
+    color: "#6B6B6B",
+    marginTop: 8,
+  },
+  formGroup: {
+    marginTop: 20,
+    width: "100%",
+  },
+  placeholderText: {
+    fontSize: 12,
+    color: "#6B6B6B",
+    marginBottom: 6,
+  },
+  inputField: {
+    borderWidth: 1,
+    borderColor: "#E5E5E5",
+    padding: 12,
+    borderRadius: 8,
+  },
+  passwordGroup: {
+    flexDirection: "row",
+    alignItems: "center",
+    borderWidth: 1,
+    borderColor: "#E5E5E5",
+    paddingHorizontal: 12,
+    borderRadius: 8,
+  },
+  forgotPasswordText: {
+    color: "#4A90E2",
+    marginTop: 8,
+    alignSelf: "flex-end",
+  },
+  button: {
+    backgroundColor: "#4A90E2",
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 8,
+    alignItems: "center",
+    marginTop: 20,
+  },
+  buttonText: {
+    color: "#ffffff",
+    fontWeight: "600",
+  },
+  dividerGroup: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginVertical: 20,
+  },
+  divider: {
+    flex: 1,
+    height: 1,
+    backgroundColor: "#E5E5E5",
+  },
+  dividerText: {
+    marginHorizontal: 12,
+    color: "#6B6B6B",
+  },
+  socialMediaButtonGroup: {
+    width: "100%",
+  },
+  socialMediaButton: {
+    borderWidth: 1,
+    borderColor: "#E5E5E5",
+    padding: 12,
+    borderRadius: 8,
+    marginBottom: 12,
+  },
+  socialMediaButtonText: {
+    marginLeft: 6,
+  },
+  subTextGroup: {
+    flexDirection: "row",
+    justifyContent: "center",
+    marginTop: 12,
+  },
+  subText: {
+    color: "#6B6B6B",
+  },
+  subTextJoin: {
+    color: "#4A90E2",
+  },
 });
+import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
+import { FontAwesome, Ionicons } from "@expo/vector-icons";
 
 export default function Index() {
   return (
@@ -32,7 +110,7 @@ export default function Index() {
         {/* Navigation Section */}
         <View style={styles.navGroup}>
           <Ionicons name="arrow-back" size={25} />
-          <Image source={require("@/assets/images/logo.png")} />
+          <Image source={require("../assets/images/logo.png")} />
         </View>
 
         {/* Title Section */}
@@ -90,7 +168,7 @@ export default function Index() {
                 gap: 5,
               }}
             >
-              <Image source={require("@/assets/images/google.png")} />
+              <Image source={require("../assets/images/google.png")} />
               <Text style={styles.socialMediaButtonText}>
                 Continue with Google
               </Text>
@@ -105,7 +183,7 @@ export default function Index() {
                 gap: 5,
               }}
             >
-              <Image source={require("@/assets/images/facebook.png")} />
+              <Image source={require("../assets/images/facebook.png")} />
               <Text style={styles.socialMediaButtonText}>
                 Continue with Facebook
               </Text>
